@@ -34,7 +34,7 @@ SeedVarianceEnhancer should work with other models, but the strength value may n
 
 ## Results:
 
-When used with Z-Image Turbo, the default settings will add a moderate amount of diversity at the cost of a some prompt adherence. Higher "randomize_percent" and "strength," as well as the use of "noise on all steps," will all substantially increasing deversity while worsening prompt adherence. The reduced prompt adherence may be desirable to users interested in generating highly diverse, strange, or unexpected images. Using very high settings offers the potential to discover unknown capabilities and knowledge within the model.
+When used with Z-Image Turbo, the default settings will add a moderate amount of diversity at the cost of some prompt adherence. Higher "randomize_percent" and "strength," as well as the use of "noise on all steps," will all substantially increasing deversity while worsening prompt adherence. The reduced prompt adherence may be desirable to users interested in generating highly diverse, strange, or unexpected images. Using very high settings offers the potential to discover unknown capabilities and knowledge within the model.
 
 
 ## Limitations:
